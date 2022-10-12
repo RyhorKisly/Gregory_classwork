@@ -18,14 +18,19 @@ public class Main {
     }
 
     private static int countBySex(Person[] people, String sex) {
-        int result = 0;
+                int result = 0;
         for (Person person : people) {
             if (person.getSex().equals(sex)) {
                 result++;
             }
         }
         return result;
+
+
+
     }
+
+
 
 
 }
