@@ -6,14 +6,6 @@ public class Main {
 
     private static final Random RANDOM = new Random();
 
-    public static void main(String[] args) {
-
-        int maxVolume = getMaxVolume(createArrayBox(5));
-        System.out.println(maxVolume);
-
-    }
-
-
     private static Box[] createArrayBox(int count) {
         Box[] boxes = new Box[count];
         for(int i = 0; i < boxes.length; i++) {
@@ -35,5 +27,13 @@ public class Main {
         }
         return maxVolume;
     }
+
+    public static void main(String[] args) {
+
+        int maxVolume = getMaxVolume(createArrayBox(5));
+        System.out.println(maxVolume);
+
+    }
+
 
 }

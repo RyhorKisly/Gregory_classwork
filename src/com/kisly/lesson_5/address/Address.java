@@ -22,10 +22,10 @@ public class Address {
         return city;
     }
 
-    public static String searchCity(Address[] gorod, String city) {
-        for (Address cities : gorod) {
-            if (cities.getCity().equalsIgnoreCase(city)) {
-                return cities.country;
+    public static String searchCity(Address[] addresses, String city) {
+        for (Address address : addresses) {
+            if (address.getCity().equalsIgnoreCase(city)) {
+                return city;
             }
         }
         return null;

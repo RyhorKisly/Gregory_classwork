@@ -17,7 +17,7 @@ public enum Day {
 
     public static int getNumberByName(String name) {
         for (Day day : values()) {
-            if (day.name().equalsIgnoreCase(name)) {
+            if (day.name().equals(name)) {
                 return day.dayNumber;
             }
         }
