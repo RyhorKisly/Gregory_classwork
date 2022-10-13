@@ -2,10 +2,10 @@ package com.kisly.lesson_5.address;
 
 public class Address {
 
-    private final String city;
-    private final String country;
-    private final String street;
-    private final int house;
+    private String city;
+    private String country;
+    private String street;
+    private int house;
 
     public Address(String city, String country, String street, int house) {
         this.city = city;
@@ -14,22 +14,23 @@ public class Address {
         this.house = house;
     }
 
-    public void print() {
-        System.out.println("City: " + city + "; Country: " + country + "; Street: " + street + "; house: " + house);
-    }
-
     public String getCity() {
         return city;
     }
 
-    public static String searchCity(Address[] addresses, String city) {
-        for (Address address : addresses) {
-            if (address.getCity().equalsIgnoreCase(city)) {
+    public void print() {
+        System.out.println("City: " + city + "; Country: " + country + "; Street: " + street + "; house: " + house);
+    }
+
+    public static String searchCity(Address[] address, String city) {
+        for (Address addresses : address) {
+            if (Address.getCity().equalsIgnoreCase(city)) {
                 return city;
             }
         }
         return null;
     }
+
 
 
     public static void main(String[] args) {
@@ -44,7 +45,7 @@ public class Address {
 
         Address[] cities = {minsk, moscow, warsaw};
 
-        System.out.println(searchCity(cities, "Minsk"));
+        System.out.println(searchCity(cities,"Minsk"));
 
 
     }
