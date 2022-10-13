@@ -22,10 +22,10 @@ public class Address {
         System.out.println("City: " + city + "; Country: " + country + "; Street: " + street + "; house: " + house);
     }
 
-    public static String searchCity(Address[] address, String city) {
+    public static Address[] searchCity(Address[] address, String city) {
         for (Address addresses : address) {
-            if (Address.getCity().equalsIgnoreCase(city)) {
-                return city;
+            if (addresses.getCity().equalsIgnoreCase(city)) {
+                return address;
             }
         }
         return null;
@@ -46,7 +46,6 @@ public class Address {
         Address[] cities = {minsk, moscow, warsaw};
 
         System.out.println(searchCity(cities,"Minsk"));
-
 
     }
 
