@@ -1,5 +1,7 @@
 package com.kisly.lesson_5.address;
 
+import java.util.Arrays;
+
 public class Address {
 
     private String city;
@@ -22,16 +24,15 @@ public class Address {
         System.out.println("City: " + city + "; Country: " + country + "; Street: " + street + "; house: " + house);
     }
 
-    public static Address[] searchCity(Address[] address, String city) {
-        for (Address addresses : address) {
-            if (addresses.getCity().equalsIgnoreCase(city)) {
-                return address;
+    public static void searchCity(Address[] address, String city) {
+
+        for (int i = 0; i < address.length; i++) {
+            if (address[i].getCity().equalsIgnoreCase(city)) {
+                address[i].print();
             }
         }
-        return null;
+
     }
-
-
 
     public static void main(String[] args) {
 
@@ -44,8 +45,7 @@ public class Address {
         warsaw.print();
 
         Address[] cities = {minsk, moscow, warsaw};
-
-        System.out.println(searchCity(cities,"Minsk"));
+        Address.searchCity(cities,"Minsk");
 
     }
 
