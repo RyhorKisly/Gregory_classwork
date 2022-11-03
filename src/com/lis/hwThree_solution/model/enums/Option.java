@@ -1,4 +1,4 @@
-package com.roman.lis.hw.carsone.model.enums;
+package com.lis.hwThree_solution.model.enums;
 
 public enum Option {
     ABS,

@@ -1,6 +1,6 @@
-package com.roman.lis.hw.carsone.model;
+package com.lis.hwThree_solution.model;
 
-import com.roman.lis.hw.carsone.model.enums.*;
+import com.lis.hwThree_solution.model.enums.*;
 
 import java.util.Set;
 

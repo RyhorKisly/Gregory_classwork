@@ -1,11 +1,11 @@
-package com.roman.lis.hw.carsone.factory;
+package com.lis.hwThree_solution.factory;
 
-import com.roman.lis.hw.carsone.model.Car;
-import com.roman.lis.hw.carsone.model.enums.Color;
-import com.roman.lis.hw.carsone.model.enums.EngineVolume;
-import com.roman.lis.hw.carsone.model.enums.Model;
-import com.roman.lis.hw.carsone.model.enums.Option;
-import com.roman.lis.hw.carsone.model.enums.WheelSize;
+import com.lis.hwThree_solution.model.Car;
+import com.lis.hwThree_solution.model.enums.Color;
+import com.lis.hwThree_solution.model.enums.EngineVolume;
+import com.lis.hwThree_solution.model.enums.Model;
+import com.lis.hwThree_solution.model.enums.Option;
+import com.lis.hwThree_solution.model.enums.WheelSize;
 
 import java.util.Arrays;
 import java.util.HashSet;

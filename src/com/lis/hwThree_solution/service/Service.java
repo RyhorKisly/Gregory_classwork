@@ -1,7 +1,7 @@
-package com.roman.lis.hw.carsone.service;
+package com.lis.hwThree_solution.service;
 
-import com.roman.lis.hw.carsone.model.Car;
-import com.roman.lis.hw.carsone.model.enums.*;
+import com.lis.hwThree_solution.model.Car;
+import com.lis.hwThree_solution.model.enums.*;
 
 public class Service {
 
