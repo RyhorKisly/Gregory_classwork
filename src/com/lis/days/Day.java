@@ -1,4 +1,4 @@
-package com.kisly.lesson_5.day;
+package com.lis.days;
 
 public enum Day {
     MONDAY(1),
@@ -17,14 +17,14 @@ public enum Day {
 
     public static int getNumberByName(String name) {
         for (Day day : values()) {
-            if (day.name().equals(name)) {
+            if (day.name().equalsIgnoreCase(name)) {
                 return day.dayNumber;
             }
         }
         return -1;
     }
 
-    public static String getDayNameByNumber(int number) {
+    public static String getNameByNumber(int number) {
         for (Day day : values()) {
             if (day.dayNumber == number) {
                 return day.name();
@@ -34,10 +34,7 @@ public enum Day {
     }
 
     public static void main(String[] args) {
-
-        System.out.println(getNumberByName("SATURDAY"));
-        System.out.println(getDayNameByNumber(3));
-
+        System.out.println(getNameByNumber(3));
+        System.out.println(getNumberByName("sATURDAY"));
     }
-
 }
