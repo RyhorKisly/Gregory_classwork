@@ -1,4 +1,4 @@
-package com.lis;
+package com.lis.classworkContakts;
 
 import java.util.HashMap;
 import java.util.Map;
