@@ -1,4 +1,4 @@
-package com.roman.lis.lessons;
+package com.lis.inputOutputStreams;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
