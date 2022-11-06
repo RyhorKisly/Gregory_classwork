@@ -17,6 +17,7 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.sql.SQLOutput;
 import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -28,23 +29,9 @@ public class InputOutputStreams {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
 
-
         //out
 //        System.out.println("something");
 //        System.err.println("something");
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -62,18 +49,6 @@ public class InputOutputStreams {
 //        System.out.println("You entered float :");
 //        System.out.println(in.nextFloat());
 //        in.close();
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -107,20 +82,7 @@ public class InputOutputStreams {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // Enter data using BufferReader
+//        // Enter data using BufferReader
 //        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 //        String name = null;
 //        try {
@@ -135,25 +97,6 @@ public class InputOutputStreams {
 //            }
 //        }
 //        System.out.println(name);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -197,26 +140,6 @@ public class InputOutputStreams {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         // read from file java = 1.7
 //        try (BufferedReader reader = new BufferedReader(
 //                new InputStreamReader(
@@ -228,30 +151,6 @@ public class InputOutputStreams {
 //        } catch (IOException e) {
 //            // log error
 //        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -279,34 +178,6 @@ public class InputOutputStreams {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         // java = 8
         //Files.lines(Paths.get("FILE_NAME"), StandardCharsets.UTF_8).forEach(System.out::println);
 
@@ -322,6 +193,71 @@ public class InputOutputStreams {
 
 
 
+//         пишем в файл с помощью OutputStream
+//        String data = "someData";
+//        OutputStream os = null;                                                                          // Для автоматического закрытия файла и освобождения
+//        try {                                                                                            // ресурса объект FileOutputStream создается с помощью конструктции try...catch.
+//            os = new FileOutputStream(new File("C:\\Users\\Workstation\\IdeaProjects" +          // МОжно добавить true - файл добавиться снизу, или false - файл перезапишется
+//                    "\\Gregory_classwork\\src\\com\\lis\\inputOutputStreams\\MisterFile"));
+//            os.write(data.getBytes(), 0, data.length());                                             // Первое в скобках - перевод строки в байты
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } finally {
+//            try {
+//                os.close();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+
+
+//          читаем с файла с помощь. InputStream
+//        FileInputStream fin = null;
+//        try {
+//            fin = new FileInputStream("C:\\Users\\Workstation\\IdeaProjects\\Gregory_classwork\\src\\com\\lis\\inputOutputStreams\\MisterFile");
+//            int i = -1;
+//            while ((i = fin.read()) != -1) {
+//                System.out.print((char) i);
+//            }
+//        } catch (IOException ex) {
+//
+//            System.out.println(ex.getMessage());
+//        } finally {
+//            try {
+//                if (fin != null)
+//                    fin.close();
+//            } catch (IOException ex) {
+//                System.out.println(ex.getMessage());
+//            }
+//        }
+
+
+
+
+
+
+
+
+
+
+
+//        Пишем с консоли и записываем в файл
+        try(BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\Workstation\\IdeaProjects\\Gregory_classwork\\src\\com\\lis\\inputOutputStreams\\MisterFile")))
+        {
+            // чтение построчно
+            String text;
+            while(!(text=br.readLine()).equals("ESC")){
+                text=br.readLine();
+                bw.write(text + "\n");
+                bw.flush();
+                System.out.println(text);
+            }
+        }
+        catch(IOException ex){
+
+            System.out.println(ex.getMessage());
+        }
 
 
 
@@ -341,54 +277,9 @@ public class InputOutputStreams {
 
 
 
-        // пишем в файл с помощью OutputStream
-        //String data = "someData";
-        //OutputStream os = null;
-        //try {
-        //    os = new FileOutputStream(new File("PATH_TO_FILE"));
-        //    os.write(data.getBytes(), 0, data.length());
-        //} catch (IOException e) {
-        //    e.printStackTrace();
-        //}finally{
-        //    try {
-        //        os.close();
-        //    } catch (IOException e) {
-        //        e.printStackTrace();
-        //    }
-        //}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // пишем в файл с помощью BufferedWriter
+    // пишем в файл с помощью BufferedWriter
         //BufferedWriter br = null;
         //try{
         //    br = new BufferedWriter(new FileWriter(new File("PATH_TO_FILE")));
@@ -458,24 +349,6 @@ public class InputOutputStreams {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         // пишем в файл с помощью Files
         //Files.write(Paths.get("PATH_TO_FILE"), "data".getBytes());
 
@@ -499,12 +372,12 @@ public class InputOutputStreams {
 
 
 
-        //FileOutputStream fos = new FileOutputStream("FILE_NAME");
-        //ObjectOutputStream oos = new ObjectOutputStream(fos);
-        //oos.writeInt(12345);
-        //oos.writeObject("Today");
-        //oos.writeObject(new Date());
-        //oos.close();
+//        FileOutputStream fos = new FileOutputStream("FILE_NAME");
+//        ObjectOutputStream oos = new ObjectOutputStream(fos);
+//        oos.writeInt(12345);
+//        oos.writeObject("Today");
+//        oos.writeObject(new Date());
+//        oos.close();
 
 
         //FileInputStream fis = new FileInputStream("FILE_NAME");
