@@ -137,9 +137,6 @@ public class InputOutputStreams {
 
 
 
-
-
-
         // read from file java = 1.7
 //        try (BufferedReader reader = new BufferedReader(
 //                new InputStreamReader(
@@ -162,10 +159,10 @@ public class InputOutputStreams {
 
 
 
-        //List<String> lines = Files.readAllLines(Paths.get("FILE_NAME"), StandardCharsets.UTF_8);
-        //for(String line: lines){
-        //    System.out.println(line);
-        //}
+//        List<String> lines = Files.readAllLines(Paths.get("FILE_NAME"), StandardCharsets.UTF_8);
+//        for(String line: lines){
+//            System.out.println(line);
+//        }
 
 
 
@@ -179,7 +176,7 @@ public class InputOutputStreams {
 
 
         // java = 8
-        //Files.lines(Paths.get("FILE_NAME"), StandardCharsets.UTF_8).forEach(System.out::println);
+//        Files.lines(Paths.get("FILE_NAME"), StandardCharsets.UTF_8).forEach(System.out::println);
 
 
 
@@ -197,7 +194,7 @@ public class InputOutputStreams {
 //        String data = "someData";
 //        OutputStream os = null;                                                                          // Для автоматического закрытия файла и освобождения
 //        try {                                                                                            // ресурса объект FileOutputStream создается с помощью конструктции try...catch.
-//            os = new FileOutputStream(new File("C:\\Users\\Workstation\\IdeaProjects" +          // МОжно добавить true - файл добавиться снизу, или false - файл перезапишется
+//            os = new FileOutputStream(new File("C:\\Users\\Workstation\\IdeaProjects" +          // Мjжно добавить true - файл добавиться снизу, или false - файл перезапишется
 //                    "\\Gregory_classwork\\src\\com\\lis\\inputOutputStreams\\MisterFile"));
 //            os.write(data.getBytes(), 0, data.length());                                             // Первое в скобках - перевод строки в байты
 //        } catch (IOException e) {
@@ -242,22 +239,22 @@ public class InputOutputStreams {
 
 
 //        Пишем с консоли и записываем в файл
-        try(BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
-            BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\Workstation\\IdeaProjects\\Gregory_classwork\\src\\com\\lis\\inputOutputStreams\\MisterFile")))
-        {
-            // чтение построчно
-            String text;
-            while(!(text=br.readLine()).equals("ESC")){
-                text=br.readLine();
-                bw.write(text + "\n");
-                bw.flush();
-                System.out.println(text);
-            }
-        }
-        catch(IOException ex){
-
-            System.out.println(ex.getMessage());
-        }
+//        try(BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
+//            BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\Workstation\\IdeaProjects\\Gregory_classwork\\src\\com\\lis\\inputOutputStreams\\MisterFile")))
+//        {
+//            // чтение построчно
+//            String text;
+//            while(!(text=br.readLine()).equals("ESC")){
+//                text=br.readLine();
+//                bw.write(text + "\n");
+//                bw.flush();
+//                System.out.println(text);
+//            }
+//        }
+//        catch(IOException ex){
+//
+//            System.out.println(ex.getMessage());
+//        }
 
 
 
@@ -349,8 +346,8 @@ public class InputOutputStreams {
 
 
 
-        // пишем в файл с помощью Files
-        //Files.write(Paths.get("PATH_TO_FILE"), "data".getBytes());
+//         пишем в файл с помощью Files
+//        Files.write(Paths.get("PATH_TO_FILE"), "data".getBytes());
 
 
 
@@ -370,8 +367,7 @@ public class InputOutputStreams {
 
 
 
-
-
+//
 //        FileOutputStream fos = new FileOutputStream("FILE_NAME");
 //        ObjectOutputStream oos = new ObjectOutputStream(fos);
 //        oos.writeInt(12345);
