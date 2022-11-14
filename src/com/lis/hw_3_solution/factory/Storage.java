@@ -1,10 +1,10 @@
-package com.lis.hwThree_solution.factory;
+package com.lis.hw_3_solution.factory;
 
-import com.lis.hwThree_solution.model.Car;
-import com.lis.hwThree_solution.model.enums.Color;
-import com.lis.hwThree_solution.model.enums.EngineVolume;
-import com.lis.hwThree_solution.model.enums.Model;
-import com.lis.hwThree_solution.model.enums.WheelSize;
+import com.lis.hw_3_solution.model.Car;
+import com.lis.hw_3_solution.model.enums.Color;
+import com.lis.hw_3_solution.model.enums.EngineVolume;
+import com.lis.hw_3_solution.model.enums.Model;
+import com.lis.hw_3_solution.model.enums.WheelSize;
 
 import java.util.ArrayList;
 import java.util.Iterator;

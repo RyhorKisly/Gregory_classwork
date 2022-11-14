@@ -1,6 +1,6 @@
-package com.lis.hwThree_solution.model;
+package com.lis.hw_3_solution.model;
 
-import com.lis.hwThree_solution.model.enums.*;
+import com.lis.hw_3_solution.model.enums.*;
 
 import java.util.Set;
 

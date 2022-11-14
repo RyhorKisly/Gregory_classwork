@@ -1,7 +1,7 @@
-package com.lis.hwThree_solution.service;
+package com.lis.hw_3_solution.service;
 
-import com.lis.hwThree_solution.model.Car;
-import com.lis.hwThree_solution.model.enums.*;
+import com.lis.hw_3_solution.model.Car;
+import com.lis.hw_3_solution.model.enums.*;
 
 public class Service {
 
