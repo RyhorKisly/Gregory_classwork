@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 public class ProdConsTest_multithreading {
 
-    private static final Integer LIMIT = 12;
+    private static final Integer LIMIT = 5;
     private static final LinkedList<Integer> BUFFER = new LinkedList<>();
     private static volatile boolean consumer = true;
     private static volatile boolean producer = true;
@@ -17,10 +17,10 @@ public class ProdConsTest_multithreading {
                     while (BUFFER.size() == LIMIT) {
                         BUFFER.wait();
                     }
-                    Thread.sleep(500);
+                    Thread.sleep(400);
                     System.out.println("Producer produced: " + ++value);
                     BUFFER.add(value);
-                    if (value == 30) {
+                    if (value == 10) {
                         producer = false;
                     }
                     BUFFER.notify();
@@ -36,10 +36,10 @@ public class ProdConsTest_multithreading {
                     while (BUFFER.size() == 0) {
                         BUFFER.wait();
                     }
-                    Thread.sleep(500);
+                    Thread.sleep(400);
                     Integer value = BUFFER.poll();
                     System.out.println("Consumer consumed: " + value);
-                    if (value != null && value == 30) {
+                    if (value != null && value == 10) {
                         consumer = false;
                     }
                     BUFFER.notify();
@@ -52,6 +52,7 @@ public class ProdConsTest_multithreading {
     public static void main(String[] args) throws InterruptedException {
         Thread producer = new Thread(ProdConsTest_multithreading::produce);
         Thread consume = new Thread(ProdConsTest_multithreading::consume);
+
         producer.start();
         consume.start();
         producer.join();
