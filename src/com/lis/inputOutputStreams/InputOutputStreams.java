@@ -15,7 +15,9 @@ import java.io.OutputStream;
 import java.io.Reader;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.SQLOutput;
 import java.util.Date;
@@ -27,6 +29,23 @@ public class InputOutputStreams {
 
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
+
+//        Копируем файлы из одной директории в другую
+//        Scanner scanner = new Scanner(System.in);
+//        Path sourceDirectory = Path.of(scanner.nextLine());
+//        Path targetDirectory = Path.of(scanner.nextLine());
+//        try(DirectoryStream<Path> files = Files.newDirectoryStream(sourceDirectory)) {
+//            for (Path file : files) {
+//                if(Files.isRegularFile(file)) {
+//                    Path resolve = targetDirectory.resolve(file.getFileName());
+//                    Files.copy(file, resolve);
+//                }
+//            }
+//        }
+
+
+
+
 
 
         //out
@@ -159,10 +178,10 @@ public class InputOutputStreams {
 
 
 
-//        List<String> lines = Files.readAllLines(Paths.get("FILE_NAME"), StandardCharsets.UTF_8);
-//        for(String line: lines){
-//            System.out.println(line);
-//        }
+        List<String> lines = Files.readAllLines(Paths.get("FILE_NAME"), StandardCharsets.UTF_8);
+        for(String line: lines){
+            System.out.println(line);
+        }
 
 
 
